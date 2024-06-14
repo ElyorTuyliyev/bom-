@@ -1,0 +1,10 @@
+.imgs {
+  width: 450px;
+  height: 450px;
+  border-radius: 30px;
+  padding: 10px;
+  object-fit: cover;
+}
+input {
+  margin-left: 10px;
+}

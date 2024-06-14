@@ -1,14 +1,34 @@
-let box1 = null;
-let box2 = null;
-div.addEventListener("click", (event) => {
-  if (!box1) {
-    box1 = event.target;
-  } else if (!box2) {
-    box2 = event.target;
-    const box1 = box1.src;
-    box1.src = box2.src;
-    box2.src = box1;
-    box1 = null;
-    box2 = null;
+// let firstImage = null;
+// let secondImage = null;
+// img.addEventListener("click", (event) => {
+//   if (!firstImage) {
+//     firstImage = event.target;
+//   } else if (!secondImage) {
+//     secondImage = event.target;
+//     const firstImg = firstImage.src;
+//     firstImage.src = secondImage.src;
+//     secondImage.src = firstImg;
+//     firstImage = null;
+//     secondImage = null;
+//   }
+// });
+
+class User {
+  constructor(name) {
+    this.name = name;
   }
-});
+}
+
+class Doctor extends User {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+}
+
+const b = new Doctor("Grdyr");
+const ba = new User("Ggrgf");
+Doctor.__proto__.getInfo = () => {
+  console.log(this);
+};
+console.log(b, ba);
