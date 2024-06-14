@@ -6,5 +6,7 @@ function imgs() {
   localStorage.setItem("link", JSON.stringify(link.value));
 }
 
-imgsWrapper.innerHTML += `<img class = 'imgs' src="${imgGet}" alt="">
-`;
+for (let i = 0; i < 2; i++) {
+  imgsWrapper.innerHTML += `<img class = 'imgs' src="${imgGet}" alt="">
+  `;
+}
